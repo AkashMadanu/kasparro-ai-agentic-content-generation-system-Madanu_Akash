@@ -1,0 +1,92 @@
+{
+    "template_name": "comparison",
+    "version": "1.0",
+    "description": "Product comparison page template",
+    "output_filename": "comparison_page.json",
+    "fields": {
+        "page_type": {
+            "type": "string",
+            "default": "comparison",
+            "description": "Page type identifier"
+        },
+        "generated_at": {
+            "type": "datetime",
+            "source": "system.timestamp",
+            "description": "Generation timestamp"
+        },
+        "product_a": {
+            "type": "object",
+            "source": "product",
+            "required": true,
+            "description": "Primary product (real product)",
+            "fields": {
+                "id": {"type": "string"},
+                "name": {"type": "string"},
+                "concentration": {"type": "string"},
+                "ingredients": {"type": "array"},
+                "benefits": {"type": "array"},
+                "skin_type": {"type": "array"},
+                "price": {"type": "string"}
+            }
+        },
+        "product_b": {
+            "type": "object",
+            "source": "llm.generated",
+            "required": true,
+            "description": "Comparison product (fictional)",
+            "fields": {
+                "id": {"type": "string"},
+                "name": {"type": "string"},
+                "concentration": {"type": "string"},
+                "ingredients": {"type": "array"},
+                "benefits": {"type": "array"},
+                "skin_type": {"type": "array"},
+                "price": {"type": "string"},
+                "is_fictional": {"type": "boolean", "default": true}
+            }
+        },
+        "comparison": {
+            "type": "object",
+            "source": "blocks.comparison",
+            "required": true,
+            "description": "Comparison analysis",
+            "fields": {
+                "ingredients": {
+                    "type": "string",
+                    "description": "Ingredients comparison"
+                },
+                "benefits": {
+                    "type": "string",
+                    "description": "Benefits comparison"
+                },
+                "price": {
+                    "type": "string",
+                    "description": "Price comparison"
+                },
+                "skin_type": {
+                    "type": "string",
+                    "description": "Skin type comparison"
+                },
+                "overall": {
+                    "type": "string",
+                    "description": "Overall comparison summary"
+                }
+            }
+        },
+        "recommendation": {
+            "type": "object",
+            "source": "computed",
+            "description": "Recommendation based on comparison",
+            "fields": {
+                "best_for_value": {"type": "string"},
+                "note": {"type": "string"},
+                "disclaimer": {"type": "string"}
+            }
+        }
+    },
+    "required_blocks": ["comparison"],
+    "dependencies": {
+        "agents": ["ComparisonAgent"],
+        "logic_blocks": ["compare_products"]
+    }
+}

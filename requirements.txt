@@ -1,0 +1,17 @@
+# Kasparro AI - Multi-Agent Content Generation System
+# Python Dependencies
+
+# Google Generative AI (Gemini)
+google-generativeai>=0.8.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# JSON schema validation
+jsonschema>=4.20.0
+
+# Type hints support (Python 3.10+)
+typing-extensions>=4.8.0
+
+# Logging utilities
+colorama>=0.4.6

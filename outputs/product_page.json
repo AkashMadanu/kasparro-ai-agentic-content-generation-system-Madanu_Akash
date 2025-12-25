@@ -1,0 +1,46 @@
+{
+  "page_type": "product",
+  "product_id": "glowboost-vitamin-c-serum-89902c79",
+  "product_name": "GlowBoost Vitamin C Serum",
+  "generated_at": "2025-12-25T14:52:02.630520+00:00",
+  "headline": "GlowBoost Vitamin C Serum: Brighten & Fade Dark Spots",
+  "description": "Unleash your skin's radiance with GlowBoost 10.0% Vitamin C Serum. Specifically formulated for oily and combination skin, this powerful serum targets dark spots and promotes a brighter, more even complexion.",
+  "concentration": "10.0%",
+  "skin_type": [
+    "Oily",
+    "Combination"
+  ],
+  "ingredients": {
+    "list": [
+      "Vitamin C",
+      "Hyaluronic Acid"
+    ],
+    "description": "Infused with 10.0% Vitamin C for powerful brightening and dark spot reduction, complemented by Hyaluronic Acid to help maintain skin hydration."
+  },
+  "benefits": {
+    "list": [
+      "Brightening",
+      "Fades dark spots"
+    ],
+    "description": "Achieve a visibly brighter complexion and effectively fade the appearance of dark spots, revealing a more luminous and uniform skin tone."
+  },
+  "usage": {
+    "instructions": "Apply 2–3 drops in the morning before sunscreen",
+    "tips": [
+      "Apply 2–3 drops to clean, dry skin.",
+      "Use once daily in the morning.",
+      "Always follow with a broad-spectrum sunscreen."
+    ]
+  },
+  "safety": {
+    "side_effects": "Mild tingling for sensitive skin",
+    "precautions": [
+      "Individuals with sensitive skin may experience a mild tingling sensation upon application."
+    ]
+  },
+  "pricing": {
+    "amount": 699.0,
+    "currency": "INR",
+    "formatted": "₹699.0"
+  }
+}

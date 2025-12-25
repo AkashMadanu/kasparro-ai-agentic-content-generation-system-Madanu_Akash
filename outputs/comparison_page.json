@@ -1,0 +1,55 @@
+{
+  "page_type": "comparison",
+  "generated_at": "2025-12-25T14:52:15.853843+00:00",
+  "product_a": {
+    "id": "glowboost-vitamin-c-serum-89902c79",
+    "name": "GlowBoost Vitamin C Serum",
+    "concentration": "10.0%",
+    "ingredients": [
+      "Vitamin C",
+      "Hyaluronic Acid"
+    ],
+    "benefits": [
+      "Brightening",
+      "Fades dark spots"
+    ],
+    "skin_type": [
+      "Oily",
+      "Combination"
+    ],
+    "price": "₹699.0"
+  },
+  "product_b": {
+    "id": "radiant-renewal-niacinamide-serum",
+    "name": "Radiant Renewal Niacinamide Serum",
+    "concentration": "10.0%",
+    "ingredients": [
+      "Niacinamide",
+      "Green Tea Extract"
+    ],
+    "benefits": [
+      "Evens skin tone",
+      "Minimizes pores",
+      "Reduces redness"
+    ],
+    "skin_type": [
+      "Oily",
+      "Combination",
+      "Acne-prone"
+    ],
+    "price": "₹749.0",
+    "is_fictional": true
+  },
+  "comparison": {
+    "ingredients": "Product A features Vitamin C and Hyaluronic Acid as its primary active ingredients, focusing on antioxidant benefits and hydration. In contrast, Product B contains Niacinamide and Green Tea Extract, known for their soothing and anti-inflammatory properties. Both serums, however, utilize a 10.0% concentration of their respective main active ingredient.",
+    "benefits": "Product A primarily targets brightening and fading dark spots, aiming to improve skin radiance and reduce hyperpigmentation. Product B offers a different set of benefits, focusing on evening skin tone, minimizing pores, and reducing redness. While both contribute to overall skin improvement, their specific benefit profiles are distinct.",
+    "price": "Product A is priced at ₹699.0, making it slightly more affordable than Product B, which costs ₹749.0. Product B is ₹50 more expensive, potentially offering a broader range of listed benefits for a modest price increase. The value proposition depends on the specific skin concerns and budget of the consumer.",
+    "skin_type": "Product A, with Vitamin C and Hyaluronic Acid, is generally well-suited for individuals concerned with dullness, hyperpigmentation, and seeking brightening effects. Product B, featuring Niacinamide and Green Tea Extract, is often recommended for those with concerns about uneven skin tone, enlarged pores, redness, or oily/combination skin. Both can cater to various skin types, but their active ingredients target different primary concerns.",
+    "overall": "Product A is a more budget-friendly option, ideal for those prioritizing brightening and the reduction of dark spots with Vitamin C. Product B, while slightly more expensive, offers a broader spectrum of benefits including pore minimization, redness reduction, and overall tone evening with Niacinamide. The choice ultimately depends on the user's specific skin concerns and desired outcomes."
+  },
+  "recommendation": {
+    "best_for_value": "GlowBoost Vitamin C Serum",
+    "note": "Recommendation based on provided product data. Individual results may vary based on skin type and preferences.",
+    "disclaimer": "Product B is fictional and created for comparison purposes only."
+  }
+}

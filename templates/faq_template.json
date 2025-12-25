@@ -1,0 +1,61 @@
+{
+    "template_name": "faq",
+    "version": "1.0",
+    "description": "FAQ page template for product Q&As",
+    "output_filename": "faq.json",
+    "fields": {
+        "page_type": {
+            "type": "string",
+            "default": "faq",
+            "description": "Page type identifier"
+        },
+        "product_name": {
+            "type": "string",
+            "source": "product.name",
+            "required": true,
+            "description": "Name of the product"
+        },
+        "product_id": {
+            "type": "string",
+            "source": "product.id",
+            "description": "Unique product identifier"
+        },
+        "generated_at": {
+            "type": "datetime",
+            "source": "system.timestamp",
+            "description": "Generation timestamp"
+        },
+        "total_faqs": {
+            "type": "integer",
+            "source": "computed",
+            "description": "Total number of FAQs"
+        },
+        "faqs": {
+            "type": "array",
+            "min_items": 5,
+            "description": "Array of FAQ items",
+            "item_schema": {
+                "question": {
+                    "type": "string",
+                    "required": true,
+                    "description": "The question text"
+                },
+                "answer": {
+                    "type": "string",
+                    "required": true,
+                    "description": "The answer text"
+                },
+                "category": {
+                    "type": "string",
+                    "enum": ["informational", "usage", "safety", "purchase", "comparison"],
+                    "description": "Question category"
+                }
+            }
+        }
+    },
+    "required_blocks": ["safety", "usage", "benefits", "ingredients"],
+    "dependencies": {
+        "agents": ["QuestionGeneratorAgent", "FAQPageAgent"],
+        "logic_blocks": ["generate_safety", "generate_usage", "generate_benefits"]
+    }
+}

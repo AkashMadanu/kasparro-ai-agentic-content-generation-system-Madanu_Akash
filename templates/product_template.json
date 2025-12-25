@@ -1,0 +1,134 @@
+{
+    "template_name": "product",
+    "version": "1.0",
+    "description": "Product description page template",
+    "output_filename": "product_page.json",
+    "fields": {
+        "page_type": {
+            "type": "string",
+            "default": "product",
+            "description": "Page type identifier"
+        },
+        "product_id": {
+            "type": "string",
+            "source": "product.id",
+            "required": true,
+            "description": "Unique product identifier"
+        },
+        "product_name": {
+            "type": "string",
+            "source": "product.name",
+            "required": true,
+            "description": "Product display name"
+        },
+        "generated_at": {
+            "type": "datetime",
+            "source": "system.timestamp",
+            "description": "Generation timestamp"
+        },
+        "headline": {
+            "type": "string",
+            "source": "llm.generated",
+            "description": "Catchy product headline"
+        },
+        "description": {
+            "type": "string",
+            "source": "llm.generated",
+            "description": "Product description"
+        },
+        "concentration": {
+            "type": "string",
+            "source": "product.concentration",
+            "description": "Active ingredient concentration"
+        },
+        "skin_type": {
+            "type": "array",
+            "source": "product.skin_type",
+            "description": "Target skin types"
+        },
+        "ingredients": {
+            "type": "object",
+            "source": "blocks.ingredients",
+            "description": "Ingredient information",
+            "fields": {
+                "list": {
+                    "type": "array",
+                    "description": "List of ingredients"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Ingredient description"
+                }
+            }
+        },
+        "benefits": {
+            "type": "object",
+            "source": "blocks.benefits",
+            "description": "Product benefits",
+            "fields": {
+                "list": {
+                    "type": "array",
+                    "description": "List of benefits"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Benefits description"
+                }
+            }
+        },
+        "usage": {
+            "type": "object",
+            "source": "blocks.usage",
+            "description": "Usage instructions",
+            "fields": {
+                "instructions": {
+                    "type": "string",
+                    "description": "How to use"
+                },
+                "tips": {
+                    "type": "array",
+                    "description": "Usage tips"
+                }
+            }
+        },
+        "safety": {
+            "type": "object",
+            "source": "blocks.safety",
+            "description": "Safety information",
+            "fields": {
+                "side_effects": {
+                    "type": "string",
+                    "description": "Side effects"
+                },
+                "precautions": {
+                    "type": "array",
+                    "description": "Precautions"
+                }
+            }
+        },
+        "pricing": {
+            "type": "object",
+            "source": "product.price",
+            "description": "Pricing information",
+            "fields": {
+                "amount": {
+                    "type": "number",
+                    "description": "Numeric price"
+                },
+                "currency": {
+                    "type": "string",
+                    "default": "INR"
+                },
+                "formatted": {
+                    "type": "string",
+                    "description": "Formatted price string"
+                }
+            }
+        }
+    },
+    "required_blocks": ["ingredients", "benefits", "usage", "safety"],
+    "dependencies": {
+        "agents": ["ProductPageAgent", "ContentLogicAgent"],
+        "logic_blocks": ["generate_ingredients", "generate_benefits", "generate_usage", "generate_safety"]
+    }
+}
