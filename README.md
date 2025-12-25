@@ -137,7 +137,7 @@ ProductParserAgent (normalize data)
 ### Prerequisites
 
 - Python 3.10 or higher
-- Google AI Studio API Key (Gemini)
+- Google AI Studio API Key (Gemini) - **[Get your free API key here](https://aistudio.google.com/app/apikey)**
 
 ### Step-by-Step Setup
 
